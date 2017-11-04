@@ -1,3 +1,5 @@
+from django.utils.translation import ugettext_lazy as _
+
 SECRET_KEY = 'b04*myk_%9&^x5elbx(j@l_76y%g(q4q98ny2*gdc0v#b+j2h7'
 
 DEBUG = True
@@ -11,8 +13,6 @@ DATABASES = {
     }
 }
 
-LANGUAGE_CODE = 'nl'
-
 TIME_ZONE = 'Europe/Amsterdam'
 
 FROM_EMAIL = 'Pleio <noreply@pleio.nl>'
@@ -24,3 +24,11 @@ LOCAL_APPS = [
 ]
 
 LOCAL_MIDDLEWARE = []
+
+LANGUAGE_CODE = 'en-us'
+
+LANGUAGES = [
+    ('en-us', _('English')),
+    ('nl-nl', _('Dutch')),
+    ('fr-fr', _('French'))
+]
